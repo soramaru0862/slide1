@@ -1,7 +1,7 @@
 'use strict'
 
 // ヘッダー
-const navButton = document.getElementById('navButton')
+const navButton = document.getElementById('nav_button')
 navButton.addEventListener('click', () => {
   const header = document.getElementById('header')
   header.classList.toggle('open')
