@@ -14,6 +14,16 @@ ul > li {
 // ヘッダー
 .button {
   margin-bottom: 100px;
+
+  @media screen and(max-width: 599px) {
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+}
+
+.mobile-logo {
+  display: none;
 }
 
 .header {
@@ -26,6 +36,12 @@ ul > li {
   background-color: rgba($color: #0e2669, $alpha: 0.8);
   transition: 0.5s ease-in-out;
 
+  @media screen and(max-width: 599px) {
+    width: 100%;
+    height: 91px;
+    min-height: 91px;
+  }
+
   &-inner {
     position: relative;
     display: flex;
@@ -36,17 +52,45 @@ ul > li {
     padding-top: 20px;
     padding-bottom: 50px;
     transition: all 0.5s ease-in-out;
+
+    @media screen and(max-width: 599px) {
+      flex-direction: row;
+      height: 100%;
+    }
   }
 
   &-logo {
     width: 74px;
     height: 263px;
     transition: 0.5s ease-in-out;
+
+    @media screen and(max-width: 599px) {
+      display: none;
+    }
+
+    &-mobile {
+      @media screen and(max-width: 599px) {
+        display: block;
+      }
+
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 99;
+      display: none;
+      width: 365px;
+      height: 280px;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &-instagram-logo {
     margin-left: 0;
-    transition: 0.5s ease-in-out;
+
+    @media screen and(max-width: 599px) {
+      margin-top: 30px;
+      margin-right: 20px;
+    }
 
     & small {
       display: none;
@@ -56,9 +100,26 @@ ul > li {
   &.open {
     width: 460px;
 
+    @media screen and(max-width: 599px) {
+      width: 100%;
+      height: 100vh;
+
+      & .mobile-logo {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        display: block;
+        transform: translate(-50%, 0);
+      }
+    }
+
     & .header-inner {
       padding-top: 0;
       padding-bottom: 20px;
+
+      @media screen and(max-width: 599px) {
+        padding-bottom: 0;
+      }
     }
 
     & .header-logo {
@@ -67,9 +128,22 @@ ul > li {
 
     & .button {
       margin-left: 390px;
+
+      @media screen and(max-width: 599px) {
+        position: absolute;
+        top: 0;
+        margin-left: 20px;
+      }
     }
 
     & .header-instagram-logo {
+      @media screen and(max-width: 599px) {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       & img {
         width: 25px;
         height: auto;
@@ -152,12 +226,24 @@ section {
 
 .slide-1 {
   background-image: url(../img/images1.jpg);
+
+  @media screen and(max-width: 599px) {
+    background-image: url(../img/images1_mobile.png);
+  }
 }
 
 .slide-2 {
   background-image: url(../img/images2.jpg);
+
+  @media screen and(max-width: 599px) {
+    background-image: url(../img/images2_mobile.png);
+  }
 }
 
 .slide-3 {
   background-image: url(../img/images3.jpg);
+
+  @media screen and(max-width: 599px) {
+    background-image: url(../img/images3_mobile.png);
+  }
 }

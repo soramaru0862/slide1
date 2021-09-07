@@ -12,6 +12,17 @@ ul > li {
 .button {
   margin-bottom: 100px;
 }
+@media screen and (max-width: 599px) {
+  .button {
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+}
+
+.mobile-logo {
+  display: none;
+}
 
 .header {
   position: fixed;
@@ -22,6 +33,13 @@ ul > li {
   min-height: 100vh;
   background-color: rgba(14, 38, 105, 0.8);
   transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 599px) {
+  .header {
+    width: 100%;
+    height: 91px;
+    min-height: 91px;
+  }
 }
 .header-inner {
   position: relative;
@@ -34,14 +52,45 @@ ul > li {
   padding-bottom: 50px;
   transition: all 0.5s ease-in-out;
 }
+@media screen and (max-width: 599px) {
+  .header-inner {
+    flex-direction: row;
+    height: 100%;
+  }
+}
 .header-logo {
   width: 74px;
   height: 263px;
   transition: 0.5s ease-in-out;
 }
+@media screen and (max-width: 599px) {
+  .header-logo {
+    display: none;
+  }
+}
+.header-logo-mobile {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  display: none;
+  width: 365px;
+  height: 280px;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 599px) {
+  .header-logo-mobile {
+    display: block;
+  }
+}
 .header-instagram-logo {
   margin-left: 0;
-  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 599px) {
+  .header-instagram-logo {
+    margin-top: 30px;
+    margin-right: 20px;
+  }
 }
 .header-instagram-logo small {
   display: none;
@@ -49,15 +98,48 @@ ul > li {
 .header.open {
   width: 460px;
 }
+@media screen and (max-width: 599px) {
+  .header.open {
+    width: 100%;
+    height: 100vh;
+  }
+  .header.open .mobile-logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, 0);
+  }
+}
 .header.open .header-inner {
   padding-top: 0;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 599px) {
+  .header.open .header-inner {
+    padding-bottom: 0;
+  }
 }
 .header.open .header-logo {
   transform: rotate(-90deg);
 }
 .header.open .button {
   margin-left: 390px;
+}
+@media screen and (max-width: 599px) {
+  .header.open .button {
+    position: absolute;
+    top: 0;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .header.open .header-instagram-logo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .header.open .header-instagram-logo img {
   width: 25px;
@@ -136,12 +218,27 @@ section {
 .slide-1 {
   background-image: url(../img/images1.jpg);
 }
+@media screen and (max-width: 599px) {
+  .slide-1 {
+    background-image: url(../img/images1_mobile.png);
+  }
+}
 
 .slide-2 {
   background-image: url(../img/images2.jpg);
 }
+@media screen and (max-width: 599px) {
+  .slide-2 {
+    background-image: url(../img/images2_mobile.png);
+  }
+}
 
 .slide-3 {
   background-image: url(../img/images3.jpg);
+}
+@media screen and (max-width: 599px) {
+  .slide-3 {
+    background-image: url(../img/images3_mobile.png);
+  }
 }
 /*# sourceMappingURL=style.css.map */
